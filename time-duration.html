@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Time Duration Calculator | Free Student Tool</title>
+
+<meta name="description" content="Calculate time duration between two times easily. Perfect for exams, study planning, and daily use.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    background: #f4f6f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    color: #ff5e62;
+    text-decoration: none;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>Time Duration Calculator</h1>
+<p>Calculate time difference easily</p>
+
+<label>Start Time</label>
+<input type="time" id="start">
+
+<label>End Time</label>
+<input type="time" id="end">
+
+<button onclick="calculate()">Calculate Duration</button>
+
+<div class="result" id="result">Duration will appear here</div>
+
+<div class="links">
+<a href="cgpa-to-percentage.html">CGPA Converter</a> |
+<a href="age-calculator.html">Age Calculator</a>
+</div>
+</div>
+
+<script>
+function calculate() {
+    const start = document.getElementById("start").value;
+    const end = document.getElementById("end").value;
+
+    if (!start || !end) {
+        document.getElementById("result").innerText = "Please select both times.";
+        return;
+    }
+
+    const startTime = new Date("1970-01-01T" + start + ":00");
+    const endTime = new Date("1970-01-01T" + end + ":00");
+
+    let diff = endTime - startTime;
+
+    if (diff < 0) {
+        diff += 24 * 60 * 60 * 1000;
+    }
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("result").innerText =
+        hours + " Hours " + minutes + " Minutes";
+}
+</script>
+
+</body>
+</html>
