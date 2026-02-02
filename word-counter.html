@@ -2,69 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Word Counter for Assignments | Free Online Tool</title>
+<title>Word Counter for Assignments | Free Student Tool</title>
 
-<meta name="description" content="Free word counter tool for assignments and exams. Count words and characters online instantly. Perfect for students and writers.">
+<meta name="description" content="Free word counter for students. Count words and characters instantly for assignments, exams and essays.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
     margin: 0;
-    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
+.card {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
 }
 
 textarea {
     width: 100%;
-    height: 200px;
-    padding: 10px;
+    height: 180px;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 16px;
+    resize: none;
 }
 
 .stats {
     display: flex;
-    justify-content: space-around;
-    margin: 15px 0;
-    font-size: 18px;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-h1, h2 {
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #0066cc;
-}
-
-footer {
+.links {
     text-align: center;
-    margin-top: 30px;
-    color: #777;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<h1>Word Counter for Assignments</h1>
-
-<p>
-This free word counter helps students count words and characters for assignments,
-essays, and exams. Just paste your text and get instant results.
-</p>
+<div class="card">
+<h1>Word Counter</h1>
+<p>Count words and characters instantly</p>
 
 <textarea id="textInput" placeholder="Paste your assignment text here..."></textarea>
 
@@ -73,25 +83,11 @@ essays, and exams. Just paste your text and get instant results.
     <div>Characters: <span id="charCount">0</span></div>
 </div>
 
-<h2>Why use this word counter?</h2>
-<ul>
-<li>Designed for students</li>
-<li>Free and accurate</li>
-<li>No signup required</li>
-<li>Works on mobile</li>
-</ul>
-
-<h2>Related Student Tools</h2>
-<p>
+<div class="links">
 <a href="percentage-calculator.html">Percentage Calculator</a> |
 <a href="age-calculator.html">Age Calculator</a>
-</p>
-
 </div>
-
-<footer>
-© 2026 Free Student Tools
-</footer>
+</div>
 
 <script>
 const textInput = document.getElementById("textInput");
