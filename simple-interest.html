@@ -2,162 +2,143 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Simple Interest Calculator | Student Tools</title>
+<title>Simple Interest Calculator | Free Student Tool</title>
 
-<meta name="description" content="Free simple interest calculator for students. Calculate interest easily using principal, rate and time. Fast and accurate.">
+<meta name="description" content="Calculate simple interest and total amount easily. Free simple interest calculator for students and exams.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f3f6fb;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.site-header {
-  background: #1e40af;
-  padding: 12px 20px;
-}
-
-.header-inner {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.site-header a {
-  color: #e0e7ff;
-  text-decoration: none;
-  margin-left: 15px;
-}
-
-.container {
-  max-width: 500px;
-  background: #fff;
-  margin: 40px auto;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.card {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
 }
 
 label {
-  font-weight: 600;
-  display: block;
-  margin-top: 15px;
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
 }
 
 input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
 button {
-  width: 100%;
-  margin-top: 20px;
-  padding: 12px;
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #1d4ed8;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .result {
-  margin-top: 20px;
-  background: #eef2ff;
-  padding: 15px;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 18px;
+    margin-top: 20px;
+    background: #f4f6f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
 }
 
-.nav-buttons {
-  text-align: center;
-  margin-top: 20px;
+.links {
+    text-align: center;
+    margin-top: 15px;
 }
 
-.nav-buttons button {
-  width: auto;
-  margin: 5px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #555;
-  font-size: 14px;
+.links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
 }
 </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">Student Tools</a>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
-  </div>
-</header>
-
-<div class="container">
-
+<div class="card">
 <h1>Simple Interest Calculator</h1>
+<p>Calculate interest and total amount instantly</p>
 
 <label>Principal Amount</label>
-<input type="number" id="principal" placeholder="Enter principal amount">
+<input type="number" id="principal" placeholder="e.g. 10000">
 
 <label>Rate of Interest (%)</label>
-<input type="number" id="rate" placeholder="Enter interest rate">
+<input type="number" id="rate" placeholder="e.g. 5">
 
 <label>Time (Years)</label>
-<input type="number" id="time" placeholder="Enter time in years">
+<input type="number" id="time" placeholder="e.g. 2">
 
-<button onclick="calculateSI()">Calculate Interest</button>
+<button onclick="calculateSI()">Calculate</button>
 
-<div class="result" id="result" style="display:none;"></div>
+<div class="result" id="result"></div>
 
-<div class="nav-buttons">
-  <button onclick="history.back()">⬅ Go Back</button>
+<div class="links">
+<a href="index.html">Home</a> |
+<a href="percentage-calculator.html">Percentage</a> |
+<a href="cgpa-to-percentage.html">CGPA</a>
 </div>
-
 </div>
-
-<footer>
-© 2026 Student Tools · Free calculators for students
-</footer>
 
 <script>
 function calculateSI() {
-  const p = document.getElementById("principal").value;
-  const r = document.getElementById("rate").value;
-  const t = document.getElementById("time").value;
+    const p = document.getElementById("principal").value;
+    const r = document.getElementById("rate").value;
+    const t = document.getElementById("time").value;
 
-  if (p === "" || r === "" || t === "") {
-    alert("Pleas
+    if (p === "" || r === "" || t === "") {
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerText =
+            "Please fill all fields correctly.";
+        return;
+    }
+
+    const si = (p * r * t) / 100;
+    const total = parseFloat(p) + si;
+
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").innerHTML =
+        "Simple Interest: ₹" + si.toFixed(2) +
+        "<br>Total Amount: ₹" + total.toFixed(2);
+}
+</script>
+
+</body>
+</html>
