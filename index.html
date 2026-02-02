@@ -2,90 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Free Student Tools Online | Calculators & Study Tools</title>
+<title>Student Tools – Free Calculators & Study Utilities</title>
 
-<meta name="description" content="Free student tools including word counter, percentage calculator, age calculator and exam utilities. Simple, fast and free online tools for students.">
+<meta name="description" content="Free student tools including word counter, calculators, CGPA converter and exam utilities. Simple, fast and mobile friendly.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
     margin: 0;
-    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
 }
 
-.container {
-    max-width: 900px;
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* TOOLS SECTION */
+.section {
+    max-width: 1100px;
     margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 50px 20px;
 }
 
-h1, h2 {
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
     color: #333;
 }
 
-.tools a {
-    display: block;
-    padding: 10px;
-    margin: 8px 0;
-    background: #eef2f7;
-    text-decoration: none;
-    color: #000;
-    border-radius: 5px;
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-.tools a:hover {
-    background: #dce6f2;
+.tool-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.tool-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tool-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.tool-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #6366f1;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* WHY SECTION */
+.why {
+    background: #fff;
+    padding: 50px 20px;
+}
+
+.why-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.why-item {
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 12px;
 }
 
 footer {
     text-align: center;
-    margin-top: 30px;
-    color: #777;
+    padding: 25px;
+    font-size: 14px;
+    color: #666;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<h1>Free Student Tools Online</h1>
-
-<p>
-This website provides free online tools for students to help with assignments,
-exams, and daily calculations. All tools are simple, fast, and work on mobile
-and desktop.
-</p>
-
-<h2>Available Tools</h2>
-
-<div class="tools">
-    <a href="word-counter.html">Word Counter for Assignments</a>
-    <a href="percentage-calculator.html">Percentage Calculator</a>
-    <a href="age-calculator.html">Age Calculator for Forms</a>
-    <a href="cgpa-to-percentage.html">CGPA to Percentage Converter</a>
-    <a href="time-duration.html">Time Duration Calculator</a>
-    <a href="simple-interest.html">Simple Interest Calculator</a>
+<!-- HERO -->
+<div class="hero">
+  <h1>Free Student Tools</h1>
+  <p>Smart calculators & study utilities for students</p>
 </div>
 
-<h2>Why Use Our Student Tools?</h2>
-<ul>
-<li>100% free and easy to use</li>
-<li>No registration required</li>
-<li>Useful for school and college students</li>
-<li>Accurate and instant results</li>
-</ul>
+<!-- TOOLS -->
+<div class="section">
+<h2>Popular Tools</h2>
 
+<div class="tools-grid">
+
+<div class="tool-card">
+<h3>Word Counter</h3>
+<p>Count words and characters for assignments</p>
+<a href="word-counter.html">Open Tool</a>
 </div>
 
-<footer>
-© 2026 Free Student Tools
-</footer>
+<div class="tool-card">
+<h3>Percentage Calculator</h3>
+<p>Calculate percentage easily from marks</p>
+<a href="percentage-calculator.html">Open Tool</a>
+</div>
 
-</body>
-</html>
+<div class="tool-card">
+<h3>Age Calculator</h3>
+<p>Find your exact age for exam forms</p>
+<a href="age-calculator.html">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<h3>CGPA to Percentage</h3>
+<p>Convert CGPA into percentage instantly</p>
+<a href="cgpa-to-percentage.html">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<h3>Time Duration</h3>
+<p>Calculate time difference easily</p>
+<a href="time-duration.html">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<h3>Simple Interest</h3>
+<p>Calculate simple interest quickly</p>
+<a href="simple-interest.html">Open
