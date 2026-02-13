@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kajay271604-gif.github.io/study-tools/sitemap.xml
+Sitemap: https://kajay271604-gif.github.io/student-tools/sitemap.xml
